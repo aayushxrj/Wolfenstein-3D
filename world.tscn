@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b420p8vum6sfy" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="Texture2D" uid="uid://c3qkkol4uf3rh" path="res://textures/grey stone wall.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://jdr5ti4rc73k" path="res://textures/GRAYROCKS.png" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://dyecibad5v4la" path="res://ui.tscn" id="4_aqk2v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -86,4 +87,5 @@ material_override = SubResource("StandardMaterial3D_036b0")
 mesh = SubResource("BoxMesh_fj7yv")
 
 [node name="player" parent="." unique_id=861774786 instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07177544, 0.14873123, -0.18471336)
+
+[node name="ui" parent="." unique_id=1111992702 instance=ExtResource("4_aqk2v")]
