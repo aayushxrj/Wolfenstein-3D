@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
 atlas = ExtResource("1_fyqef")
-region = Rect2(0, 32, 64, 32)
+region = Rect2(0, 34, 64, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m6e0p"]
 atlas = ExtResource("1_fyqef")
@@ -13,19 +13,19 @@ region = Rect2(0, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_waa4j"]
 atlas = ExtResource("1_fyqef")
-region = Rect2(64, 32, 64, 32)
+region = Rect2(64, 34, 64, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ok7cu"]
 atlas = ExtResource("1_fyqef")
-region = Rect2(128, 32, 64, 32)
+region = Rect2(128, 34, 64, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irxef"]
 atlas = ExtResource("1_fyqef")
-region = Rect2(192, 32, 64, 32)
+region = Rect2(192, 34, 64, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2l4f"]
 atlas = ExtResource("1_fyqef")
-region = Rect2(256, 32, 64, 32)
+region = Rect2(256, 34, 64, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_27fn8"]
 atlas = ExtResource("1_fyqef")
@@ -100,7 +100,7 @@ animations = [{
 script = ExtResource("1_m6e0p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=751527507]
-position = Vector2(996, 800)
+position = Vector2(987, 818.00006)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_y4yjw")
 animation = &"gun_idle"
