@@ -55,8 +55,8 @@ animations = [{
 script = ExtResource("1_m6e0p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=751527507]
-position = Vector2(587, 528)
-scale = Vector2(5, 5)
+position = Vector2(996, 880)
+scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_y4yjw")
 animation = &"stab"
 
@@ -66,9 +66,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -576.0
+offset_left = -960.0
 offset_top = -40.0
-offset_right = 576.0
+offset_right = 960.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.03529412, 0.05882353, 0.41960785, 1)
