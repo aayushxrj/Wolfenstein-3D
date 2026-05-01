@@ -7,10 +7,6 @@
 atlas = ExtResource("1_fyqef")
 region = Rect2(0, 34, 64, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6e0p"]
-atlas = ExtResource("1_fyqef")
-region = Rect2(0, 0, 64, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_waa4j"]
 atlas = ExtResource("1_fyqef")
 region = Rect2(64, 34, 64, 31)
@@ -26,6 +22,50 @@ region = Rect2(192, 34, 64, 31)
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2l4f"]
 atlas = ExtResource("1_fyqef")
 region = Rect2(256, 34, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6e0p"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5rqp"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(0, 65, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs482"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(64, 65, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxd00"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(128, 65, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etlur"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(192, 65, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rqds"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(256, 65, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvb2n"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(0, 97, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os5c7"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(64, 97, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2p7n"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(128, 97, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkygq"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(192, 97, 64, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sosvr"]
+atlas = ExtResource("1_fyqef")
+region = Rect2(256, 97, 64, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_27fn8"]
 atlas = ExtResource("1_fyqef")
@@ -55,14 +95,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m6e0p")
-}],
-"loop": true,
-"name": &"knife_idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_waa4j")
 }, {
 "duration": 1.0,
@@ -75,8 +107,66 @@ animations = [{
 "texture": SubResource("AtlasTexture_e2l4f")
 }],
 "loop": false,
-"name": &"shoot",
-"speed": 16.0
+"name": &"gun_shoot",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6e0p")
+}],
+"loop": true,
+"name": &"knife_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5rqp")
+}],
+"loop": false,
+"name": &"machinegun_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs482")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxd00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etlur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rqds")
+}],
+"loop": false,
+"name": &"machinegun_shoot",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvb2n")
+}],
+"loop": false,
+"name": &"mini_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os5c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2p7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkygq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sosvr")
+}],
+"loop": false,
+"name": &"mini_shoot",
+"speed": 24.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -93,17 +183,17 @@ animations = [{
 }],
 "loop": false,
 "name": &"stab",
-"speed": 16.0
+"speed": 24.0
 }]
 
 [node name="ui" type="CanvasLayer" unique_id=1111992702]
 script = ExtResource("1_m6e0p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=751527507]
-position = Vector2(987, 818.00006)
+position = Vector2(979, 816)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_y4yjw")
-animation = &"gun_idle"
+animation = &"stab"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1182477149]
 anchors_preset = 7
