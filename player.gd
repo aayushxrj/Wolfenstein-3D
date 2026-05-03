@@ -11,7 +11,9 @@ var pitch := 0.0
 @onready var camera = $Camera3D
 
 func _ready():
+	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 
 func _input(event):
 	if event is InputEventMouseMotion:
