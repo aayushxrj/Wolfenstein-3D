@@ -2,6 +2,7 @@ extends CanvasLayer
 
 var time_since_last_shot = 0.0
 var fire_rate = 1.0
+var can_shoot = true
 
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_AnimatedSprite2D_animation_finished)
@@ -9,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	time_since_last_shot += delta
-	var can_shoot = time_since_last_shot >= (1.0 / fire_rate)
+	can_shoot = time_since_last_shot >= (1.0 / fire_rate)
 	
 	if Global.current_weapon != "knife" and Global.ammo <= 0:
 		Global.current_weapon = "knife"

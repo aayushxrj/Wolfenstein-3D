@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://c3qkkol4uf3rh" path="res://textures/grey stone wall.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://jdr5ti4rc73k" path="res://textures/GRAYROCKS.png" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://bt5tbd6s78n4k" path="res://guard.tscn" id="2_036b0"]
-[ext_resource type="PackedScene" uid="uid://dyecibad5v4la" path="res://ui.tscn" id="4_aqk2v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -136,4 +135,11 @@ shape = SubResource("ConcavePolygonShape3D_pkg7o")
 
 [node name="player" parent="." unique_id=861774786 instance=ExtResource("1_f3sb7")]
 
-[node name="ui" parent="." unique_id=1111992702 instance=ExtResource("4_aqk2v")]
+[node name="guard" parent="." unique_id=1575933668 instance=ExtResource("2_036b0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.682452, 9.536743e-07, 3.2629204)
+
+[node name="guard2" parent="." unique_id=1830845603 instance=ExtResource("2_036b0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.979436, 0, -11.303867)
+
+[node name="guard3" parent="." unique_id=1375822606 instance=ExtResource("2_036b0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.872816, 0, 2.0906277)

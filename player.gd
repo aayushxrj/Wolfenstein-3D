@@ -9,6 +9,8 @@ const DEADZONE = 0.1
 var pitch := 0.0
 
 @onready var camera = $Camera3D
+@onready var ui_script = $ui
+@onready var ray = $Camera3D/RayCast3D
 
 func _ready():
 	add_to_group("player")
@@ -53,5 +55,14 @@ func _physics_process(delta: float) -> void:
 	var look_input = Input.get_action_strength("look_right") - Input.get_action_strength("look_left")
 	if abs(look_input) > DEADZONE:
 		rotate_y(-look_input * JOYSTICK_SENSITIVITY * delta)
+		
+	if Input.is_action_pressed("attack"):
+		if ui_script.can_shoot:
+			shoot()
 
 	move_and_slide()
+	
+func shoot():
+	if ray.is_colliding() and ray.get_collider().has_method("die"):
+		ray.get_collider().die()
+	
