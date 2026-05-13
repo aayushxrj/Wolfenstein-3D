@@ -85,4 +85,6 @@ func player_die():
 	set_process_input(false)
 	# Optional: reload scene after 2 sec
 	await get_tree().create_timer(3.0).timeout
+	Global.ammo = 100
+	Global.current_weapon = "gun"
 	get_tree().reload_current_scene()

@@ -12,31 +12,64 @@ var attack_range = 5
 func _ready():
 	add_to_group("enemy")
 
+#func _physics_process(delta):
+	#if dead or is_attacking:  # Check if the enemy is dead or attacking
+		#return
+#
+	#if player == null:
+		#player = get_tree().get_first_node_in_group("player")
+		#return
+		#
+	#var dir = player.global_position - global_position
+	#dir.y = 0.0
+	#dir = dir.normalized()
+	#
+	#velocity = dir * SPEED
+	## Add the gravity.
+	#if not is_on_floor():
+		#velocity.y -= gravity * delta
+	#
+	#look_at(player.global_position) # added so that guard faces towards player and not just look
+	#move_and_slide()
+	#
+	#if not is_attacking:
+		#if $AnimatedSprite3D.animation != "default":
+			#$AnimatedSprite3D.play("default")
+			#
+	#attack()
+	
 func _physics_process(delta):
-	if dead or is_attacking:  # Check if the enemy is dead or attacking
+	if dead:
 		return
 
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 		return
-		
+
 	var dir = player.global_position - global_position
 	dir.y = 0.0
 	dir = dir.normalized()
-	
-	velocity = dir * SPEED
-	# Add the gravity.
+
+	# Move only if not attacking
+	if not is_attacking:
+		velocity = dir * SPEED
+	else:
+		velocity.x = 0
+		velocity.z = 0
+
+	# Gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	
-	look_at(player.global_position) # added so that guard faces towards player and not just look
+
+	look_at(player.global_position)
+
 	move_and_slide()
-	
+
 	if not is_attacking:
 		if $AnimatedSprite3D.animation != "default":
 			$AnimatedSprite3D.play("default")
-			
-	attack()
+
+		attack()
 
 func attack():
 	var dist_to_player = global_position.distance_to(player.global_position)

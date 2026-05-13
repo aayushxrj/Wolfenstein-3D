@@ -134,15 +134,3 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("ConcavePolygonShape3D_pkg7o")
 
 [node name="player" parent="." unique_id=861774786 instance=ExtResource("1_f3sb7")]
-
-[node name="guard" parent="." unique_id=1575933668 instance=ExtResource("2_036b0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.682452, 9.536743e-07, 3.2629204)
-
-[node name="guard2" parent="." unique_id=1830845603 instance=ExtResource("2_036b0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.979436, 0, -11.303867)
-
-[node name="guard3" parent="." unique_id=1375822606 instance=ExtResource("2_036b0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.872816, 0, 2.0906277)
-
-[node name="guard4" parent="." unique_id=1115963483 instance=ExtResource("2_036b0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7163837, 0, 17.765587)
