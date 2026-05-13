@@ -69,12 +69,20 @@ func shoot():
 		ray.get_collider().die()
 	
 func damage():
-	player_health -= 10
+	player_health -= 5
 	print(player_health)
 	if player_health <= 0:
-		#queue_free()
 		player_die()
 
 func player_die():
-	queue_free()
+	#queue_free()
+	print("Player died")
+
+	# Release mouse
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	# Stop movement
+	set_physics_process(false)
+	set_process_input(false)
+	# Optional: reload scene after 2 sec
+	await get_tree().create_timer(3.0).timeout
+	get_tree().reload_current_scene()

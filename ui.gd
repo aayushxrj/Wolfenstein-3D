@@ -50,4 +50,4 @@ func _on_AnimatedSprite2D_animation_finished():
 		$AnimatedSprite2D.play("gun_idle")
 		
 func update_player_health():
-	$HEALTH.text = str(get_parent().player_health)
+	$HEALTH.text = str(max(get_parent().player_health, 0))
