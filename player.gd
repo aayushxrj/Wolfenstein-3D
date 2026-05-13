@@ -68,3 +68,13 @@ func shoot():
 	if ray.is_colliding() and ray.get_collider().has_method("die"):
 		ray.get_collider().die()
 	
+func damage():
+	player_health -= 10
+	print(player_health)
+	if player_health <= 0:
+		#queue_free()
+		player_die()
+
+func player_die():
+	queue_free()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

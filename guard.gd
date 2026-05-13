@@ -28,7 +28,8 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
+	
+	look_at(player.global_position) # added so that guard faces towards player and not just look
 	move_and_slide()
 	
 	if not is_attacking:
@@ -42,11 +43,20 @@ func attack():
 	if dist_to_player > attack_range:
 		return
 		#$AnimatedSprite3D.play("default")
-	else:
-		is_attacking = true  # Set the attacking flag
-		$AnimatedSprite3D.play("shoot")
-		await $AnimatedSprite3D.animation_finished  # Wait for the animation to finish
-		is_attacking = false  # Reset the attacking flag
+	#else:
+	# to re-aim if player moves
+	var dir = player.global_position - global_position
+	dir.y = 0.0
+	dir = dir.normalized()
+	rotation.y = atan2(dir.x, dir.y)
+	
+	# old else block
+	is_attacking = true  # Set the attacking flag
+	$AnimatedSprite3D.play("shoot")
+	if $RayCast3D.is_colliding() and $RayCast3D.get_collider().has_method("damage"):
+		$RayCast3D.get_collider().damage()
+	await $AnimatedSprite3D.animation_finished  # Wait for the animation to finish
+	is_attacking = false  # Reset the attacking flag
 
 
 func die():
