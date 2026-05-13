@@ -39,6 +39,8 @@ func _process(delta):
 			fire_rate = 2.0
 		_:
 			fire_rate = 1.0
+	
+	update_player_health()
 		
 
 func _on_AnimatedSprite2D_animation_finished():
@@ -46,3 +48,6 @@ func _on_AnimatedSprite2D_animation_finished():
 		$AnimatedSprite2D.play("knife_idle")
 	elif Global.current_weapon == "gun":
 		$AnimatedSprite2D.play("gun_idle")
+		
+func update_player_health():
+	$HEALTH.text = str(get_parent().player_health)

@@ -8,6 +8,8 @@ const DEADZONE = 0.1
 
 var pitch := 0.0
 
+var player_health = 100
+
 @onready var camera = $Camera3D
 @onready var ui_script = $ui
 @onready var ray = $Camera3D/RayCast3D
