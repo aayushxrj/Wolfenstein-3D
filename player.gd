@@ -65,8 +65,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func shoot():
-	if ray.is_colliding() and ray.get_collider().has_method("die"):
-		ray.get_collider().die()
+	if ray.is_colliding() and ray.get_collider().has_method("guard_die"):
+		ray.get_collider().guard_die()
 	
 func damage():
 	player_health -= 5
@@ -75,16 +75,18 @@ func damage():
 		player_die()
 
 func player_die():
-	#queue_free()
+
 	print("Player died")
 
 	# Release mouse
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	queue_free()
+	
 	# Stop movement
-	set_physics_process(false)
-	set_process_input(false)
+	#set_physics_process(false)
+	#set_process_input(false)
 	# Optional: reload scene after 2 sec
-	await get_tree().create_timer(3.0).timeout
-	Global.ammo = 100
-	Global.current_weapon = "gun"
-	get_tree().reload_current_scene()
+	#await get_tree().create_timer(3.0).timeout
+	#Global.ammo = 100
+	#Global.current_weapon = "gun"
+	#get_tree().reload_current_scene()

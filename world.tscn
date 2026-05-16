@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c3qkkol4uf3rh" path="res://textures/grey stone wall.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://jdr5ti4rc73k" path="res://textures/GRAYROCKS.png" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://bt5tbd6s78n4k" path="res://guard.tscn" id="2_036b0"]
+[ext_resource type="PackedScene" uid="uid://bw1kasl0wifcx" path="res://ammo.tscn" id="5_036b0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -134,3 +135,6 @@ mesh = SubResource("BoxMesh_fj7yv")
 shape = SubResource("ConcavePolygonShape3D_pkg7o")
 
 [node name="player" parent="." unique_id=861774786 instance=ExtResource("1_f3sb7")]
+
+[node name="ammo" parent="." unique_id=878161408 instance=ExtResource("5_036b0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9424756, 0.060000002, -6.640796)
