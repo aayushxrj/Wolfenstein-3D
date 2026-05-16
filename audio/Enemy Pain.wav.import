@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://tjweoanj7pld"
-path="res://.godot/imported/All Right!.wav-8c2c955c74c195b4bd6d62cf868e2c92.sample"
+uid="uid://yquac0c3fqc5"
+path="res://.godot/imported/Enemy Pain.wav-e5c5c6699c4a4c204e831412aad1bc8f.sample"
 
 [deps]
 
-source_file="res://sounds/All Right!.wav"
-dest_files=["res://.godot/imported/All Right!.wav-8c2c955c74c195b4bd6d62cf868e2c92.sample"]
+source_file="res://audio/Enemy Pain.wav"
+dest_files=["res://.godot/imported/Enemy Pain.wav-e5c5c6699c4a4c204e831412aad1bc8f.sample"]
 
 [params]
 

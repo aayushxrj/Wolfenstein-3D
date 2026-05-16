@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dclmj1kexl0jk"]
 
-[ext_resource type="PackedScene" uid="uid://b420p8vum6sfy" path="res://player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://b420p8vum6sfy" path="res://nodes/player.tscn" id="1_f3sb7"]
 [ext_resource type="Texture2D" uid="uid://c3qkkol4uf3rh" path="res://textures/grey stone wall.png" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://jdr5ti4rc73k" path="res://textures/GRAYROCKS.png" id="1_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://bt5tbd6s78n4k" path="res://guard.tscn" id="2_036b0"]
-[ext_resource type="PackedScene" uid="uid://bw1kasl0wifcx" path="res://ammo.tscn" id="5_036b0"]
-[ext_resource type="PackedScene" uid="uid://qde6cgesqh71" path="res://health.tscn" id="6_dwbse"]
+[ext_resource type="PackedScene" uid="uid://bt5tbd6s78n4k" path="res://nodes/guard.tscn" id="2_036b0"]
+[ext_resource type="PackedScene" uid="uid://bw1kasl0wifcx" path="res://nodes/ammo.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://qde6cgesqh71" path="res://nodes/health.tscn" id="6_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

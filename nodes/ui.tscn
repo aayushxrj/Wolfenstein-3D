@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyecibad5v4la"]
 
 [ext_resource type="Texture2D" uid="uid://bvsipjtm57piu" path="res://sprites/wolfweapons.png" id="1_fyqef"]
-[ext_resource type="Script" uid="uid://ctokskg7sx5v4" path="res://ui.gd" id="1_m6e0p"]
+[ext_resource type="Script" uid="uid://ctokskg7sx5v4" path="res://scripts/ui.gd" id="1_m6e0p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
 atlas = ExtResource("1_fyqef")
@@ -204,7 +204,7 @@ script = ExtResource("1_m6e0p")
 position = Vector2(979, 816)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_y4yjw")
-animation = &"mini_shoot"
+animation = &"mini_idle"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1182477149]
 anchors_preset = 7

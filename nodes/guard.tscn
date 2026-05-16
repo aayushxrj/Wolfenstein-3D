@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bt5tbd6s78n4k"]
 
-[ext_resource type="Script" uid="uid://dlwvqqtqegsea" path="res://guard.gd" id="1_30cdx"]
+[ext_resource type="Script" uid="uid://dlwvqqtqegsea" path="res://scripts/guard.gd" id="1_30cdx"]
 [ext_resource type="Texture2D" uid="uid://ii6irtofk6mg" path="res://sprites/guard.png" id="2_aoykg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cruxe"]

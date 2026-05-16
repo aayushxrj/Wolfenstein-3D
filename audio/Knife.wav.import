@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://yquac0c3fqc5"
-path="res://.godot/imported/Enemy Pain.wav-9bdc74804068937db67c06529dec7829.sample"
+uid="uid://c654avnu5dlwj"
+path="res://.godot/imported/Knife.wav-f3ff42154f90729f3b93ac7f85bf1e18.sample"
 
 [deps]
 
-source_file="res://sounds/Enemy Pain.wav"
-dest_files=["res://.godot/imported/Enemy Pain.wav-9bdc74804068937db67c06529dec7829.sample"]
+source_file="res://audio/Knife.wav"
+dest_files=["res://.godot/imported/Knife.wav-f3ff42154f90729f3b93ac7f85bf1e18.sample"]
 
 [params]
 

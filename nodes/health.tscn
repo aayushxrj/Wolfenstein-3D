@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bw1kasl0wifcx"]
+[gd_scene format=3 uid="uid://qde6cgesqh71"]
 
-[ext_resource type="Script" uid="uid://60hfo0stojll" path="res://ammo.gd" id="1_rfx0k"]
+[ext_resource type="Script" uid="uid://cca3i4ob3325e" path="res://scripts/health.gd" id="1_ledv5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mulmr"]
 load_path = "res://.godot/imported/wolf-items.png-35a77640da60104337ce5d344f21bf64.s3tc.ctex"
@@ -9,14 +9,15 @@ load_path = "res://.godot/imported/wolf-items.png-35a77640da60104337ce5d344f21bf
 radius = 0.7216797
 height = 1.5004883
 
-[node name="ammo" type="Area3D" unique_id=878161408]
-script = ExtResource("1_rfx0k")
+[node name="health" type="Area3D" unique_id=878161408]
+script = ExtResource("1_ledv5")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1856392301]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.9, 0)
 billboard = 2
 texture = SubResource("CompressedTexture2D_mulmr")
 hframes = 4
+frame = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1216280952]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5967101, 0)
