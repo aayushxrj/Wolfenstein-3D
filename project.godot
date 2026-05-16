@@ -25,6 +25,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ai_assistant_hub/plugin.cfg")
+
 [input]
 
 move_left={
@@ -77,6 +81,15 @@ look_left={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[plugins]
+
+ai_assistant_hub/options/debug_mode=0
+ai_assistant_hub/llm_api="ollama_api"
+ai_assistant_hub/preferences/thinking_target=0
+ai_assistant_hub/preferences/skip_greeting=false
+ai_assistant_hub/preferences/always_scroll_to_bottom=false
+ai_assistant_hub/preferences/audio_hints=true
 
 [rendering]
 

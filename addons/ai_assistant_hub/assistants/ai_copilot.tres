@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AIAssistantResource" format=3 uid="uid://cm3mcoylb8334"]
+
+[ext_resource type="Resource" uid="uid://c0xq2vafep0gu" path="res://addons/ai_assistant_hub/llm_providers/ollama.tres" id="1_8jxqq"]
+[ext_resource type="Script" uid="uid://bgpdhnnnuue6b" path="res://addons/ai_assistant_hub/quick_prompts/ai_quick_prompt_resource.gd" id="2_gcshc"]
+[ext_resource type="Script" uid="uid://bpefca68gplhn" path="res://addons/ai_assistant_hub/assistants/ai_assistant_resource.gd" id="3_8xrgj"]
+
+[resource]
+script = ExtResource("3_8xrgj")
+type_name = "Copilot"
+ai_model = "qwen2.5-coder:7b"
+llm_provider = ExtResource("1_8jxqq")
