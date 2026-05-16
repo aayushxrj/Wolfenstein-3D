@@ -187,10 +187,10 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_27fn8"]
-font_size = 40
+font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6e0p"]
-font_size = 40
+font_size = 50
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 8
@@ -268,10 +268,10 @@ anchor_left = 0.64500004
 anchor_top = 0.89000005
 anchor_right = 0.763
 anchor_bottom = 1.0
-offset_left = 193.59998
-offset_top = 2.7999268
-offset_right = 186.04004
-offset_bottom = -3.0
+offset_left = 231.59998
+offset_top = 1.7999268
+offset_right = 224.04004
+offset_bottom = -4.0
 text = "AMMO"
 label_settings = SubResource("LabelSettings_m6e0p")
 horizontal_alignment = 1
