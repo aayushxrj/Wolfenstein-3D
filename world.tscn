@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://jdr5ti4rc73k" path="res://textures/GRAYROCKS.png" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://bt5tbd6s78n4k" path="res://guard.tscn" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://bw1kasl0wifcx" path="res://ammo.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://qde6cgesqh71" path="res://health.tscn" id="6_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -88,12 +89,6 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.7242881, 0, 0.7513
 [node name="guard3" parent="MeshInstance3D" unique_id=1221007760 instance=ExtResource("2_036b0")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.72879547, 0, -0.46999675)
 
-[node name="guard4" parent="MeshInstance3D" unique_id=578933735 instance=ExtResource("2_036b0")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.5316865, 0, -0.49159384)
-
-[node name="guard5" parent="MeshInstance3D" unique_id=1013992452 instance=ExtResource("2_036b0")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.25624967, 0, -0.5834214)
-
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1448262312]
 transform = Transform3D(40, 0, 0, 0, 10, 0, 0, 0, 1, 0, 0, 20)
 material_override = SubResource("StandardMaterial3D_fj7yv")
@@ -138,3 +133,6 @@ shape = SubResource("ConcavePolygonShape3D_pkg7o")
 
 [node name="ammo" parent="." unique_id=878161408 instance=ExtResource("5_036b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9424756, 0.060000002, -6.640796)
+
+[node name="health" parent="." unique_id=952794644 instance=ExtResource("6_dwbse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.182827, 0.060000002, -5.351692)
