@@ -42,6 +42,8 @@ func _process(delta):
 	
 	update_health_label()
 	update_ammo_label()
+	update_lives_label()
+	update_face_animation(get_parent().player_health)
 		
 
 func _on_AnimatedSprite2D_animation_finished():
@@ -52,7 +54,27 @@ func _on_AnimatedSprite2D_animation_finished():
 		
 func update_health_label():
 	$HEALTH.text = str(max(get_parent().player_health, 0)) + "%"
-	
 			
 func update_ammo_label():
 	$AMMO.text = str(Global.ammo)
+
+func update_lives_label():
+	$LIVES.text = str(Global.lives)
+	
+func update_face_animation(health):
+	var animation_name = ""
+	if health > 90:
+		animation_name = "100"
+	elif health > 75:
+		animation_name = "90"
+	elif health > 60:
+		animation_name = "75"
+	elif health > 45:
+		animation_name = "60"
+	elif health > 30:
+		animation_name = "45"
+	elif health > 15:
+		animation_name = "30"
+	else:
+		animation_name = "15"
+	$bj.play(animation_name)

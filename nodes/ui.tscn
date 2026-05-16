@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvsipjtm57piu" path="res://sprites/wolfweapons.png" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://ctokskg7sx5v4" path="res://scripts/ui.gd" id="1_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://8llbi8u1oped" path="res://sprites/bjface.png" id="3_qwmkn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
 atlas = ExtResource("1_fyqef")
@@ -197,6 +198,191 @@ shadow_size = 8
 shadow_color = Color(0, 0, 0, 0.627451)
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rd3pg"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6oha"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khow0"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfq6s"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(576, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj5nc"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(608, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wiec"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(640, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yerpf"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6nck"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhal6"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(544, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy5d3"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l61so"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p5kn"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lmnr"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wb7n"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcbtf"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly0db"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gly8y"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o1d7"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88b5u"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvf2l"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2lo2"]
+atlas = ExtResource("3_qwmkn")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xfhec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rd3pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6oha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khow0")
+}],
+"loop": true,
+"name": &"100",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfq6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj5nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wiec")
+}],
+"loop": true,
+"name": &"15",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yerpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6nck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhal6")
+}],
+"loop": true,
+"name": &"30",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy5d3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l61so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8p5kn")
+}],
+"loop": true,
+"name": &"45",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lmnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wb7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcbtf")
+}],
+"loop": true,
+"name": &"60",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly0db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gly8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o1d7")
+}],
+"loop": true,
+"name": &"75",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88b5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvf2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2lo2")
+}],
+"loop": true,
+"name": &"90",
+"speed": 3.0
+}]
+
 [node name="ui" type="CanvasLayer" unique_id=1111992702]
 script = ExtResource("1_m6e0p")
 
@@ -204,7 +390,7 @@ script = ExtResource("1_m6e0p")
 position = Vector2(979, 816)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_y4yjw")
-animation = &"mini_idle"
+animation = &"gun_idle"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1182477149]
 anchors_preset = 7
@@ -221,57 +407,93 @@ color = Color(0.03529412, 0.05882353, 0.41960785, 1)
 
 [node name="HEALTH" type="Label" parent="." unique_id=854205332]
 anchors_preset = -1
-anchor_left = 0.64500004
-anchor_top = 0.88900006
-anchor_right = 0.75100005
+anchor_left = 0.643
+anchor_top = 0.94200003
+anchor_right = 0.72300005
 anchor_bottom = 1.0
-offset_left = 34.599976
-offset_top = 59.879944
-offset_right = -4.920044
-offset_bottom = -9.0
+offset_left = -9.560059
+offset_top = -0.3600464
+offset_right = 0.83984375
+offset_bottom = 6.0
 label_settings = SubResource("LabelSettings_27fn8")
 horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="Label2" type="Label" parent="." unique_id=2003834736]
 anchors_preset = -1
-anchor_left = 0.64500004
+anchor_left = 0.623
 anchor_top = 0.89000005
-anchor_right = 0.763
+anchor_right = 0.73700005
 anchor_bottom = 1.0
-offset_left = 5.5999756
-offset_top = 2.7999268
-offset_right = -1.9599609
-offset_bottom = -3.0
+offset_left = -0.16003418
+offset_top = -0.20007324
+offset_right = -0.040039063
+offset_bottom = 22.0
 text = "HEALTH
+"
+label_settings = SubResource("LabelSettings_m6e0p")
+horizontal_alignment = 1
+
+[node name="LIVES" type="Label" parent="." unique_id=1476087209]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.93900007
+anchor_right = 0.51000005
+anchor_bottom = 1.0
+offset_top = -0.12005615
+offset_right = 0.79992676
+offset_bottom = 3.0
+label_settings = SubResource("LabelSettings_27fn8")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label4" type="Label" parent="." unique_id=236702550]
+anchors_preset = -1
+anchor_left = 0.41000003
+anchor_top = 0.887
+anchor_right = 0.52400005
+anchor_bottom = 1.0
+offset_left = -0.20007324
+offset_top = 0.039978027
+offset_right = -0.080078125
+offset_bottom = 19.0
+text = "LIVES
 "
 label_settings = SubResource("LabelSettings_m6e0p")
 horizontal_alignment = 1
 
 [node name="AMMO" type="Label" parent="." unique_id=1285270814]
 anchors_preset = -1
-anchor_left = 0.64500004
-anchor_top = 0.88900006
-anchor_right = 0.75100005
+anchor_left = 0.76600003
+anchor_top = 0.94000006
+anchor_right = 0.851
 anchor_bottom = 1.0
-offset_left = 222.59998
-offset_top = 59.879944
-offset_right = 183.07996
-offset_bottom = -5.0
+offset_left = -0.7200928
+offset_top = -0.20007324
+offset_right = 0.079956055
+offset_bottom = 4.0
 label_settings = SubResource("LabelSettings_27fn8")
 horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="Label3" type="Label" parent="." unique_id=1678274594]
 anchors_preset = -1
-anchor_left = 0.64500004
-anchor_top = 0.89000005
-anchor_right = 0.763
+anchor_left = 0.75900006
+anchor_top = 0.88600004
+anchor_right = 0.873
 anchor_bottom = 1.0
-offset_left = 231.59998
-offset_top = 1.7999268
-offset_right = 224.04004
-offset_bottom = -4.0
+offset_left = 0.71984863
+offset_top = 0.11993408
+offset_right = 0.8399658
+offset_bottom = -10.0
 text = "AMMO"
 label_settings = SubResource("LabelSettings_m6e0p")
 horizontal_alignment = 1
+
+[node name="bj" type="AnimatedSprite2D" parent="." unique_id=1653717300]
+position = Vector2(1052.0001, 1021)
+scale = Vector2(3.8593724, 3.6249983)
+sprite_frames = SubResource("SpriteFrames_xfhec")
+animation = &"15"
+frame = 2
+frame_progress = 0.8619958

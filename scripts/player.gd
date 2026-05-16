@@ -72,7 +72,11 @@ func damage():
 	player_health -= 5
 	print(player_health)
 	if player_health <= 0:
-		player_die()
+		if Global.lives <= 1:
+			player_die()
+		else:
+			Global.lives -= 1
+			get_tree().change_scene_to_file("res://world.tscn")
 
 func player_die():
 
