@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bvsipjtm57piu" path="res://sprites/wolfweapons.png" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://ctokskg7sx5v4" path="res://scripts/ui.gd" id="1_m6e0p"]
 [ext_resource type="Texture2D" uid="uid://8llbi8u1oped" path="res://sprites/bjface.png" id="3_qwmkn"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="4_rd3pg"]
+[ext_resource type="Texture2D" uid="uid://df72aeuke8r26" path="res://buttons/xbox_button_color_x.png" id="5_khow0"]
+[ext_resource type="Texture2D" uid="uid://cqu7wd1n77eas" path="res://buttons/xbox_button_color_a.png" id="6_hfq6s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
 atlas = ExtResource("1_fyqef")
@@ -497,3 +500,47 @@ sprite_frames = SubResource("SpriteFrames_xfhec")
 animation = &"15"
 frame = 2
 frame_progress = 0.8619958
+
+[node name="Virtual Joystick Left" parent="." unique_id=370680323 instance=ExtResource("4_rd3pg")]
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.595
+anchor_right = 0.193
+anchor_bottom = 0.873
+offset_left = 0.87999725
+offset_top = 0.39996338
+offset_right = -0.55999756
+offset_bottom = 0.15997314
+visibility_mode = 2
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_backward"
+
+[node name="Virtual Joystick Right" parent="." unique_id=364669233 instance=ExtResource("4_rd3pg")]
+anchors_preset = -1
+anchor_left = 0.78900003
+anchor_top = 0.58900005
+anchor_right = 0.95300007
+anchor_bottom = 0.87100005
+offset_left = -0.88012695
+offset_top = -0.12005615
+offset_right = 0.23986816
+offset_bottom = 0.3199463
+visibility_mode = 2
+action_left = "look_left"
+action_right = "look_right"
+
+[node name="AttackButton" type="TouchScreenButton" parent="." unique_id=1145607172]
+position = Vector2(1773, 533)
+texture_normal = ExtResource("5_khow0")
+passby_press = true
+action = "attack"
+visibility_mode = 1
+
+[node name="JumpButton" type="TouchScreenButton" parent="." unique_id=794166963]
+position = Vector2(1537, 540)
+texture_normal = ExtResource("6_hfq6s")
+passby_press = true
+action = "jump"
+visibility_mode = 1

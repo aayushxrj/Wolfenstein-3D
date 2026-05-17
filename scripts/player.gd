@@ -14,13 +14,17 @@ var player_health = 100
 @onready var ui_script = $ui
 @onready var ray = $Camera3D/RayCast3D
 
+@onready var left_joystick = $ui/"Virtual Joystick Left"
+#@onready var right_joystick = $ui/"Virtual Joystick Right"
+
 func _ready():
 	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	#if event is InputEventMouseMotion: # old code
+	if event is InputEventMouseMotion and not OS.has_feature("mobile"):
 		# Rotate player left/right (Y axis)
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 
@@ -28,6 +32,17 @@ func _input(event):
 		#pitch -= event.relative.y * MOUSE_SENSITIVITY
 		#pitch = clamp(pitch, deg_to_rad(-80), deg_to_rad(80))
 		#camera.rotation.x = pitch
+	
+	# Mobile touch look
+	if event is InputEventScreenDrag:
+		# Right side of screen controls camera
+		if event.position.x > get_viewport().size.x / 2:
+			# Horizontal
+			rotate_y(-event.relative.x * MOUSE_SENSITIVITY * 0.5)
+			# Vertical
+			#pitch -= event.relative.y * MOUSE_SENSITIVITY * 0.5
+			#pitch = clamp(pitch, deg_to_rad(-80), deg_to_rad(80))
+			#camera.rotation.x = pitch
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -42,6 +57,12 @@ func _physics_process(delta: float) -> void:
 
 	# Movement input (WASD / joystick)
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	
+	# Mobile joystick movement
+	if left_joystick and left_joystick.is_pressed:
+		input_dir = left_joystick.output
+	# Prevent values above 1
+	input_dir = input_dir.limit_length()
 
 	# Convert to 3D direction relative to where player is facing
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -57,7 +78,11 @@ func _physics_process(delta: float) -> void:
 	var look_input = Input.get_action_strength("look_right") - Input.get_action_strength("look_left")
 	if abs(look_input) > DEADZONE:
 		rotate_y(-look_input * JOYSTICK_SENSITIVITY * delta)
-		
+	
+	# for right virtual joystick
+	#if right_joystick and right_joystick.is_pressed:
+		#rotate_y(-right_joystick.output.x * JOYSTICK_SENSITIVITY * delta * 5.0)
+		#
 	if Input.is_action_pressed("attack"):
 		if ui_script.can_shoot:
 			shoot()
