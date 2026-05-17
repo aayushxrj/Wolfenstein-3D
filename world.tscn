@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b420p8vum6sfy" path="res://nodes/player.tscn" id="1_f3sb7"]
 [ext_resource type="Texture2D" uid="uid://c3qkkol4uf3rh" path="res://textures/grey stone wall.png" id="1_fj7yv"]
+[ext_resource type="Script" uid="uid://c0kdobai17yw" path="res://scripts/world.gd" id="1_pkg7o"]
 [ext_resource type="Texture2D" uid="uid://jdr5ti4rc73k" path="res://textures/GRAYROCKS.png" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://bt5tbd6s78n4k" path="res://nodes/guard.tscn" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://bw1kasl0wifcx" path="res://nodes/ammo.tscn" id="5_036b0"]
@@ -61,7 +62,10 @@ uv1_scale = Vector3(20, 8, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pkg7o"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gbfbk"]
+
 [node name="world" type="Node3D" unique_id=206378296]
+script = ExtResource("1_pkg7o")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1393702146]
 environment = SubResource("Environment_aqk2v")
@@ -136,3 +140,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9424756, 0.060000002, -6.6
 
 [node name="health" parent="." unique_id=952794644 instance=ExtResource("6_dwbse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.182827, 0.060000002, -5.351692)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1186921911]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=532481371]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -16.87452, 0, -16.757805)
+shape = SubResource("BoxShape3D_gbfbk")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

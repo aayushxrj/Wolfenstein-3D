@@ -43,6 +43,7 @@ func _process(delta):
 	update_health_label()
 	update_ammo_label()
 	update_lives_label()
+	update_level_label()
 	update_face_animation(get_parent().player_health)
 		
 
@@ -60,6 +61,9 @@ func update_ammo_label():
 
 func update_lives_label():
 	$LIVES.text = str(Global.lives)
+	
+func update_level_label():
+	$LEVEL.text = str(Global.current_level)
 	
 func update_face_animation(health):
 	var animation_name = ""

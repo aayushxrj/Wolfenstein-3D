@@ -465,6 +465,36 @@ text = "LIVES
 label_settings = SubResource("LabelSettings_m6e0p")
 horizontal_alignment = 1
 
+[node name="LEVEL" type="Label" parent="." unique_id=581212425]
+anchors_preset = -1
+anchor_left = 0.29900002
+anchor_top = 0.933
+anchor_right = 0.38500002
+anchor_bottom = 1.0
+offset_left = 0.9199219
+offset_top = 0.35998535
+offset_right = -0.2000122
+offset_bottom = -3.0
+label_settings = SubResource("LabelSettings_27fn8")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label5" type="Label" parent="." unique_id=2057991301]
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.88100004
+anchor_right = 0.39800003
+anchor_bottom = 1.0
+offset_left = 0.7199707
+offset_top = 0.5199585
+offset_right = 0.8399658
+offset_bottom = 85.0
+text = "LEVEL
+
+"
+label_settings = SubResource("LabelSettings_m6e0p")
+horizontal_alignment = 1
+
 [node name="AMMO" type="Label" parent="." unique_id=1285270814]
 anchors_preset = -1
 anchor_left = 0.76600003

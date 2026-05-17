@@ -15,7 +15,7 @@ var player_health = 100
 @onready var ray = $Camera3D/RayCast3D
 
 @onready var left_joystick = $ui/"Virtual Joystick Left"
-#@onready var right_joystick = $ui/"Virtual Joystick Right"
+@onready var right_joystick = $ui/"Virtual Joystick Right"
 
 func _ready():
 	add_to_group("player")
@@ -79,10 +79,10 @@ func _physics_process(delta: float) -> void:
 	if abs(look_input) > DEADZONE:
 		rotate_y(-look_input * JOYSTICK_SENSITIVITY * delta)
 	
-	# for right virtual joystick
-	#if right_joystick and right_joystick.is_pressed:
-		#rotate_y(-right_joystick.output.x * JOYSTICK_SENSITIVITY * delta * 5.0)
-		#
+	 #for right virtual joystick
+	if right_joystick and right_joystick.is_pressed:
+		rotate_y(-right_joystick.output.x * JOYSTICK_SENSITIVITY * delta * 5.0)
+
 	if Input.is_action_pressed("attack"):
 		if ui_script.can_shoot:
 			shoot()
